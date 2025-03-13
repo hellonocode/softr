@@ -27,3 +27,16 @@ console.log("Skrypt został załadowany i uruchomiony.");
     element.setAttribute('data-line-clamp', 'false');
   });
 });
+
+// Przeszukaj wszystkie elementy na stronie
+const elements = document.querySelectorAll('*');
+
+// Dla każdego elementu, sprawdź, czy zawiera -webkit-line-clamp w stylach
+elements.forEach(element => {
+    const style = window.getComputedStyle(element);
+    if (style.webkitLineClamp) {
+        // Jeśli element ma -webkit-line-clamp, zmieniamy go na 'none'
+        element.style.webkitLineClamp = 'none';
+        console.log("Zmieniłem -webkit-line-clamp na none.");
+    }
+});
