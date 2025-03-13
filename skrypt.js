@@ -1,4 +1,4 @@
-<script>document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
 console.log("Skrypt został załadowany i uruchomiony.");
   // Tworzymy obserwatora, który monitoruje zmiany w DOM
   const observer = new MutationObserver(function(mutationsList, observer) {
@@ -26,4 +26,4 @@ console.log("Skrypt został załadowany i uruchomiony.");
   elements.forEach(element => {
     element.setAttribute('data-line-clamp', 'false');
   });
-});</script>
+});
