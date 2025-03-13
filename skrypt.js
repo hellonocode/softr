@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // Sprawdzamy, czy iframe jest załadowane
   iframe.onload = function() {
     console.log("Iframe załadowany, uruchamiamy skrypt.");
+    console.log(window.parent.document);
 
     // Tworzymy obserwatora, który monitoruje zmiany w DOM
     const observer = new MutationObserver(function(mutationsList, observer) {
